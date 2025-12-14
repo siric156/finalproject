@@ -42,5 +42,5 @@ def text_to_speech_bytes(text: str, lang: str = "en") -> bytes:
 text = st.text_input("Type something")
 if st.button("Speak") and text:
     audio = text_to_speech_bytes(text)
-    st.audio(audio, format="audio/mp3")
+    st.audio(audio, format="audio/mp3", autoplay=True)
 
