@@ -29,7 +29,7 @@ if image is not None:
     image = Image.open(image)
     results = model.predict(source=image, save=False)  # save plotted images
     #t = ToTensor()
-    annotated = results(0).plot()
+    annotated = results[0].plot()
     #image = t(image)
     st.image(annotated)
     #transformed_image = transforms(image[:, :, :])
