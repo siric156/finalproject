@@ -5,6 +5,10 @@ from torchvision.io import decode_image
 from PIL import Image
 from torchvision.transforms import ToTensor
 import torch
+import io
+import streamlit as st
+from gtts import gTTS
+
 # bring in model and all
 weights = ResNet50_Weights.DEFAULT
 transforms = weights.transforms()
@@ -29,13 +33,14 @@ if image is not None:
 #st.write(pred_val)
     st.write(weights.meta['categories'][pred_val])
 
-import streamlit as st
-from streamlit_TTS import text_to_speech
+def text_to_speech_bytes(text: str, lang: str = "en") -> bytes:
+    fp = io.BytesIO()
+    gTTS(text=text, lang=lang).write_to_fp(fp)
+    fp.seek(0)
+    return fp.read()
 
-# Simple text-to-speech
-text_to_speech("Hello! Welcome to my Streamlit app!", language='en')
-
-# With user input
-text = st.text_input("Enter text to speak:")
+text = st.text_input("Type something")
 if st.button("Speak") and text:
-    text_to_speech(text, language='en')
+    audio = text_to_speech_bytes(text)
+    st.audio(audio, format="audio/mp3")
+
