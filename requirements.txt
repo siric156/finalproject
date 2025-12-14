@@ -5,5 +5,5 @@ Pillow
 numpy
 openai
 python-dotenv
-streamlit-TTS 
 pydub
+gTTS
