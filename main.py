@@ -20,7 +20,7 @@ weights = ResNet50_Weights.DEFAULT
 transforms = weights.transforms()
 model = resnet50(weights=weights)
 
-st.header('A tool for classifying images for visual aids')
+st.header('A tool for classifying images for Visual Aids')
 
 st.write('Introduction to Python - Final Project')
 
