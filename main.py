@@ -40,5 +40,5 @@ if image is not None:
 #st.write(pred_val)
     #st.write(weights.meta['categories'][pred_val])
     st.write(results)
-    audio = text_to_speech_bytes(weights.meta['categories'][pred_val])
-    st.audio(audio, format="audio/mp3", autoplay=True)
+    #audio = text_to_speech_bytes(weights.meta['categories'][pred_val])
+    #st.audio(audio, format="audio/mp3", autoplay=True)
