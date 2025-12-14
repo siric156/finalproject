@@ -23,7 +23,9 @@ def text_to_speech_bytes(text: str, lang: str = "en") -> bytes:
 st.header('A tool for classifying images for Visual Aids')
 
 st.write('Introduction to Python - Final Project')
-model = YOLO("yolov8n.pt")
+@st.cache_resource 
+def load():return YOLO("yolov8n.pt")
+model = load()
 image = st.camera_input("Take a picture")
 if image is not None:   
     image = Image.open(image)
