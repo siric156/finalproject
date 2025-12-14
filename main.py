@@ -40,10 +40,3 @@ if image is not None:
     st.write(weights.meta['categories'][pred_val])
     audio = text_to_speech_bytes(weights.meta['categories'][pred_val])
     st.audio(audio, format="audio/mp3", autoplay=True)
-
-
-text = st.text_input("Type something")
-if st.button("Speak") and text:
-    audio = text_to_speech_bytes(text)
-    st.audio(audio, format="audio/mp3", autoplay=True)
-
