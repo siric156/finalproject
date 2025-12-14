@@ -20,9 +20,9 @@ weights = ResNet50_Weights.DEFAULT
 transforms = weights.transforms()
 model = resnet50(weights=weights)
 
-st.header('Generalization of Hot Dog not Hot Dog')
+st.header('A tool for classifying images for visual aids')
 
-st.write('This project uses ResNet50')
+st.write('Introduction to Python - Final Project')
 
 image = st.camera_input("Take a picture")
 if image is not None:   
