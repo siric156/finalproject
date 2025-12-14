@@ -25,7 +25,7 @@ if image is not None:
     image = Image.open(image)
 
     # unconditional image captioning
-    inputs = processor(raw_image, return_tensors="pt")
+    inputs = processor(image, return_tensors="pt")
 
     out = model.generate(**inputs)
     text_out = (processor.decode(out[0], skip_special_tokens=True))
