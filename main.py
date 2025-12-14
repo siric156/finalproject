@@ -26,12 +26,12 @@ st.write('Introduction to Python - Final Project')
 model = YOLO("yolov8n.pt")
 image = st.camera_input("Take a picture")
 if image is not None:   
-    st.image(image)
     image = Image.open(image)
     results = model.predict(source=image, save=False)  # save plotted images
     #t = ToTensor()
+    annotated = results(0).plot()
     #image = t(image)
-
+    st.image(annotated)
     #transformed_image = transforms(image[:, :, :])
 
 #pass it through the model
