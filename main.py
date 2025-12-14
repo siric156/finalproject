@@ -9,6 +9,12 @@ import io
 import streamlit as st
 from gtts import gTTS
 
+def text_to_speech_bytes(text: str, lang: str = "en") -> bytes:
+    fp = io.BytesIO()
+    gTTS(text=text, lang=lang).write_to_fp(fp)
+    fp.seek(0)
+    return fp.read()
+
 # bring in model and all
 weights = ResNet50_Weights.DEFAULT
 transforms = weights.transforms()
@@ -32,12 +38,9 @@ if image is not None:
     pred_val = torch.argmax(prediction)
 #st.write(pred_val)
     st.write(weights.meta['categories'][pred_val])
+    audio = text_to_speech_bytes(weights.meta['categories'][pred_val])
+    st.audio(audio, format="audio/mp3", autoplay=True)
 
-def text_to_speech_bytes(text: str, lang: str = "en") -> bytes:
-    fp = io.BytesIO()
-    gTTS(text=text, lang=lang).write_to_fp(fp)
-    fp.seek(0)
-    return fp.read()
 
 text = st.text_input("Type something")
 if st.button("Speak") and text:
