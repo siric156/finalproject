@@ -8,3 +8,4 @@ python-dotenv
 pydub
 gTTS
 ultralytics
+transformers
