@@ -24,7 +24,7 @@ st.header('A tool for classifying images for Visual Aids')
 
 st.write('Introduction to Python - Final Project')
 @st.cache_resource 
-def load():return YOLO("yolov11n.pt")
+def load():return YOLO("yolo11n.pt")
 model = load()
 image = st.camera_input("Take a picture")
 if image is not None:   
