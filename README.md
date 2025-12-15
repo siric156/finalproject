@@ -14,7 +14,7 @@ My process began with browsing a pretrained model which I have come across - YOL
 interface that allows users to upload images and receive real-time predictions. With after a few trys and errors, I got them to work in the app's interface, however, the results generated are 
 not at all accurate. 
 I then changed route and went back to browse Huggingface again and search in the image-to-audio section and came across this pretrained model that I am currently using in my project which turns 
-out to be very accurate and the previouse one.
+out to be very accurate than the previous one.
 Throughout the development, I encountered a lot of technical challenges and diffculties related to environment configuration, including missing dependencies such as FFmpeg 
 and file path errors when loading model weights on Streamlit Cloud. 
 Resolving these issues were challenging in which I have done research to understand how external system packages, Python libraries, and cloud deployment environments interact,
