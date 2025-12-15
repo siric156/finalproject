@@ -21,5 +21,5 @@ Resolving these issues were challenging in which I had to do some research in or
 as well as debugging stack traces to identify the root causes of these errors.
 After correcting model naming conventions, managing the file paths, and configuring the deployment environment properly, I was able to successfully load the model and run the application.
 
-To refelct, I found this app to be quite challenging to do as it is my first time taking a coding class let alone building an app from that. I was really greatful when the app work 
+To reflect, I found this app to be quite challenging to do as it is my first time taking a coding class let alone building an app from that. I was really greatful when the app work 
 and are actually able to help the visually impaired people and its accuracy is something that is really cool for me. 
