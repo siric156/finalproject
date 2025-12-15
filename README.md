@@ -1,7 +1,7 @@
 My final project interactive streamlit app aims to help visually impaired people navigate and accomodate their day to day life activities, acting if so they are a pair of eyes for those individuals
 through image classification. 
 The flow of this app is that you take a photo of an object or somewhere you are walking to, the app will then collect the data and it will response with a voice, stating what is in the photo taken.
-For example: "A girl holding a red lipstick"
+For example: "A girl holding a red lipstick".
 This is to help ease the pain of running into something and to know what is in front of them through sound/ audio based medium.
 
 In the future, I think to develop this app further, it could be paired with a meta glass to help those individual navigate through their daily lifestyles. The way it would work is that the camera 
