@@ -17,7 +17,7 @@ I then changed route and went back to browse Huggingface again and search in the
 out to be very accurate than the previous one.
 Throughout the development, I encountered a lot of technical challenges and diffculties related to environment configuration, including missing dependencies such as FFmpeg 
 and file path errors when loading model weights on Streamlit Cloud. 
-Resolving these issues were challenging in which I have done research to understand how external system packages, Python libraries, and cloud deployment environments interact,
+Resolving these issues were challenging in which I had to do some research in order to understand how external system packages, Python libraries, and cloud deployment environments interact,
 as well as debugging stack traces to identify the root causes of these errors.
 After correcting model naming conventions, managing the file paths, and configuring the deployment environment properly, I was able to successfully load the model and run the application.
 
